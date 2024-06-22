@@ -1,9 +1,9 @@
+import 'package:brainwired/controllers/route.dart';
+import 'package:brainwired/screen/userlisting.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vinnovatetest/controllers/route.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vinnovatetest/screen/productlisting.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,7 +32,8 @@ class MyApp extends StatelessWidget {
               appBarTheme: const AppBarTheme(
                 color: Color(0xFFF9F4F0),
               ),
-              textTheme: const TextTheme(titleMedium: TextStyle(color: Colors.grey)),
+              textTheme:
+                  const TextTheme(titleMedium: TextStyle(color: Colors.grey)),
               checkboxTheme: CheckboxThemeData(
                 checkColor: MaterialStateProperty.all(Colors.white),
                 fillColor: MaterialStateProperty.all(Colors.white),
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
               scaffoldBackgroundColor: const Color(0xFFF9F4F0),
               useMaterial3: true,
             ),
-            home: const ProductListPage(),
+            home: UserListPage(),
             initialRoute: initialRoute,
             onGenerateRoute: Routers.generateRoute,
           );
